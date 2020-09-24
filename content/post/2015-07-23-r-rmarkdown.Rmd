@@ -193,16 +193,16 @@ Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL
 2.  Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
 Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686\>
     
-    3.  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+3.  H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
 Springer-Verlag New York, 2016.
 
 4. Baptiste Auguie (2017). gridExtra: Miscellaneous Functions for “Grid”
 Graphics. R package version 2.3.
 <https://CRAN.R-project.org/package=gridExtra>
     
-    5.  Alboukadel Kassambara (2020). ggpubr: ‘ggplot2’ Based Publication
+5.  Alboukadel Kassambara (2020). ggpubr: ‘ggplot2’ Based Publication
 Ready Plots. R package version 0.4.0.
 <https://CRAN.R-project.org/package=ggpubr>
     
-    6.  Open Data Dataset. (2020). Retrieved September 23, 2020, from
+6.  Open Data Dataset. (2020). Retrieved September 23, 2020, from
 <https://open.toronto.ca/dataset/daily-shelter-occupancy/>
