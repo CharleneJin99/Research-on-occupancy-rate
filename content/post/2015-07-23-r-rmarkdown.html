@@ -1,0 +1,126 @@
+---
+title: "How does the daily occupancy rate of ON shelters change under the strike of COVID-19?"
+author: "JIN QIU"
+date: 2020-09-23T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+
+
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>This research aims at discovering the change of the situation of daily
+shelters in ON due to the strike of COVID-19. The analysis is based on
+the comparison between the data from year 2020 and year 2019, and will
+especially focus on the changes in occupancy rate. The most important
+finding is that the average occupancy rate has decreased, while the
+situation of overwhelmed shelter is even more severe.</p>
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>In year 2020, due to the strike of COVID-19, the Ontario government has
+required everyone to keep the social distance and reduce the frequency
+of going out to stop the spread of COVID-19. That means, all the
+homeless people on the street has to go to a shelter. That makes me get
+curious: will there be more shelters in Ontario to host all the homeless
+people compared to last year? Are there enough spots in those shelters?
+To answer the questions, I did a statistical research and find out that
+there might not be enough shelters in Ontario.</p>
+<p>From the analysis, I find out that the number of shelters that are under
+performance this year is even less than the number of last year(2019),
+along with a decrease in the occupancy rate. The average occupancy rate
+in 2019 is 0.9559, while that in 2020 is 0.7981. ALthough the situation
+of a overwhelmed shelter has existed since last year, the highest
+occupancy rate in ON this year for a single shelter has arrived 4.05,
+which is almost 3 times of that in last year. This means, the use ratio
+of the shelters is below the average during the period of COVID-19, and
+there are not enough available spots provided in the shelter.</p>
+<p>During the process of the analyzing the occupancy rate, we are using the
+data from OPENDATA Toronto. And they collect the information of all the
+shelters in Ontario everyday at 4 a.m. However, since I am doing the
+research in the middle of 2020, the data I am using only covered that
+past 9 months, that may cause some mistake when I use the data to do the
+comparison and analysis. For example, there might be more homeless
+people in the shelter in winter due to the weather, and the average
+ratio might be underestimated with the use of current data. Another
+possible error is, when I am doing the research, neither the data from
+2020 or the data from 2019 is selected randomly, I literally used all
+the data points that I am provided with. The conclusion that I can draw
+from the current data is there is not enough spots in the shelters of ON
+for the past 9 months, and the government should invest more to make
+sure that all the homeless can stay safe in a shelter during this
+special period . I will continue to do the research and decide how many
+more shelters and spots should be provided in the future.</p>
+</div>
+<div id="how-does-the-sector-that-the-shelter-hosts-change-due-to-the-impact-of-covid-19-for-year-2020-compared-to-year-2019" class="section level1">
+<h1>How does the sector that the shelter hosts change due to the impact of COVID-19 for year 2020 compared to year 2019?</h1>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/sector%20bar-1.png" width="672" /></p>
+<p>From the plot above, we can conclude that the shelter provided for all
+sectors has decreased this year more or less. There might be various
+reasons for this situation, one of the most possible reason is that
+COVID-19 has made it difficult for the government to hold all the
+shelters on running due to the shortage of funding or workforce.</p>
+</div>
+<div id="futhermore-how-does-the-occupancy-rate-change-due-to-the-covid-19-in-year-2020-compared-to-year-2019" class="section level1">
+<h1>Futhermore, how does the occupancy rate change due to the COVID-19 in year 2020 compared to year 2019?</h1>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/plots-1.png" width="672" /></p>
+<p>This two plots show that there might be some postive linear relationship
+between capacity and occupancy. We can conclude that the variance of the
+data in 2020 is larger than that of 2019. This means, the situations may
+vary from diffrent shelters in 2020.</p>
+<pre class="r"><code>summary(ratio19)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##  0.0000  0.9546  1.0000  0.9559  1.0000  1.7727     129
+summary(ratio20)
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##  0.0000  0.6667  0.9231  0.7979  1.0000  4.0500     724</code></pre>
+<p><img src="/post/2015-07-23-r-rmarkdown_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>From the chart and the histograms above, it is not hard to conclude that
+the average occupancy rate in year 2020 is about 20% lower than that in
+2020. In specific, the histogram for year 2020 is hardly right-skewed,
+while we could say the histogram for year 2019 is slightly right-skewed.
+Although they both peak at a occupancy ratio=1, there are more extreme
+data points in year 2020 compared to year 2019. This could lead to a
+conclusion that although the shelters almost reach their maximum
+capacity in both year and get overwhelmed to some extent, the situation
+in 2020 may be more extreme, since there are more outliers.</p>
+<p>In general, the situation we are facing right now is some shelters are
+not fully used, while some others are extremely overloaded. The possible
+reason for this might be that people can not commute conveniently due to
+the COVID-19, so they are forced to stay in the certain area. However,
+even if we are only looking at the data in year 2019, we cans say that
+there is no enough shelter spots in ON, to fulfill the society’s needs
+for shelter spots, the government needs to make more investment.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ol style="list-style-type: decimal">
+<li>JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi
+and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and
+Winston Chang and Richard Iannone (2020). rmarkdown: Dynamic
+Documents for R. R package version 2.1. URL
+<a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.</li>
+</ol>
+<p>Yihui Xie and J.J. Allaire and Garrett Grolemund (2018). R Markdown: The
+Definitive Guide. Chapman and Hall/CRC. ISBN 9781138359338. URL
+<a href="https://bookdown.org/yihui/rmarkdown" class="uri">https://bookdown.org/yihui/rmarkdown</a>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
+Source Software, 4(43), 1686, <a href="https://doi.org/10.21105/joss.01686\" class="uri">https://doi.org/10.21105/joss.01686\</a></p>
+<ol start="3" style="list-style-type: decimal">
+<li>H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
+Springer-Verlag New York, 2016.</li>
+</ol></li>
+<li><p>Baptiste Auguie (2017). gridExtra: Miscellaneous Functions for “Grid”
+Graphics. R package version 2.3.
+<a href="https://CRAN.R-project.org/package=gridExtra" class="uri">https://CRAN.R-project.org/package=gridExtra</a></p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Alboukadel Kassambara (2020). ggpubr: ‘ggplot2’ Based Publication
+Ready Plots. R package version 0.4.0.
+<a href="https://CRAN.R-project.org/package=ggpubr" class="uri">https://CRAN.R-project.org/package=ggpubr</a></p></li>
+<li><p>Open Data Dataset. (2020). Retrieved September 23, 2020, from
+<a href="https://open.toronto.ca/dataset/daily-shelter-occupancy/" class="uri">https://open.toronto.ca/dataset/daily-shelter-occupancy/</a></p></li>
+</ol></li>
+</ol>
+</div>
